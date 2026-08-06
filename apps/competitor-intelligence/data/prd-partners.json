@@ -1,0 +1,466 @@
+[
+  {
+    "id": "PART-GMAIL",
+    "name": "Gmail API",
+    "category": "Email",
+    "applicableModules": [
+      "Email Outreach",
+      "Job Tracker"
+    ],
+    "proposedUse": "Send a user-reviewed message and optionally support explicitly approved sync features.",
+    "officialUrl": "https://developers.google.com/workspace/gmail/api/auth/scopes",
+    "apiAvailability": "Official API",
+    "authentication": "Google OAuth 2.0",
+    "pricingEvidence": "Google Workspace API quotas apply; commercial security/verification effort requires confirmation.",
+    "commercialUseStatus": "Permitted subject to Google API Services User Data Policy and scope verification.",
+    "dataHandled": [
+      "OAuth tokens",
+      "Message content",
+      "Recipient address"
+    ],
+    "securityRequirements": [
+      "Least privilege",
+      "Encrypted token storage",
+      "Revocation and deletion test"
+    ],
+    "legalDependencies": [
+      "Purpose-specific consent",
+      "Recipient communication rules",
+      "Google verification"
+    ],
+    "implementationComplexity": "Medium",
+    "recommendation": "Start with gmail.send only at the send moment; keep copy/mailto alternatives.",
+    "verificationState": "Verified official source"
+  },
+  {
+    "id": "PART-GREENHOUSE",
+    "name": "Greenhouse Job Board API",
+    "category": "Job data",
+    "applicableModules": [
+      "AI Job Matcher"
+    ],
+    "proposedUse": "Ingest public employer job postings with source attribution.",
+    "officialUrl": "https://developers.greenhouse.io/job-board.html",
+    "apiAvailability": "Official public Job Board API",
+    "authentication": "Public GET endpoints; write endpoints differ",
+    "pricingEvidence": "Public documentation does not establish HireNudge commercial partnership terms.",
+    "commercialUseStatus": "Review employer terms, attribution, caching and commercial rights per use case.",
+    "dataHandled": [
+      "Job posting data",
+      "Employer identifiers"
+    ],
+    "securityRequirements": [
+      "Source allowlist",
+      "Rate limiting",
+      "Takedown workflow"
+    ],
+    "legalDependencies": [
+      "Terms review",
+      "Data retention and expiry policy"
+    ],
+    "implementationComplexity": "Medium",
+    "recommendation": "Use only after a documented source policy and freshness lifecycle.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-ASHBY",
+    "name": "Ashby public job postings API",
+    "category": "Job data",
+    "applicableModules": [
+      "AI Job Matcher"
+    ],
+    "proposedUse": "Ingest public job-board postings from opted-in employer boards.",
+    "officialUrl": "https://developers.ashbyhq.com/docs/public-job-posting-api",
+    "apiAvailability": "Official public job-posting API",
+    "authentication": "Public job board endpoint",
+    "pricingEvidence": "Partnership/commercial reuse terms require confirmation.",
+    "commercialUseStatus": "Review terms, cache, attribution and deletion obligations.",
+    "dataHandled": [
+      "Job posting data"
+    ],
+    "securityRequirements": [
+      "Rate limiting",
+      "Freshness audit"
+    ],
+    "legalDependencies": [
+      "Terms review",
+      "Takedown handling"
+    ],
+    "implementationComplexity": "Medium",
+    "recommendation": "Pilot alongside Greenhouse with source-specific quality metrics.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-APIFY",
+    "name": "Apify",
+    "category": "Data extraction",
+    "applicableModules": [
+      "AI Job Matcher",
+      "Company research"
+    ],
+    "proposedUse": "Run governed extraction jobs only where source terms and rights permit.",
+    "officialUrl": "https://docs.apify.com/platform",
+    "apiAvailability": "Official platform API",
+    "authentication": "API token",
+    "pricingEvidence": "Usage-based platform pricing; actor costs vary.",
+    "commercialUseStatus": "Platform availability does not grant rights to scrape target sites.",
+    "dataHandled": [
+      "Target-page content",
+      "Job/company data"
+    ],
+    "securityRequirements": [
+      "Credential isolation",
+      "Actor review",
+      "Logging"
+    ],
+    "legalDependencies": [
+      "Target-site terms",
+      "Copyright/database rights",
+      "Privacy review"
+    ],
+    "implementationComplexity": "High",
+    "recommendation": "Do not make restricted scraping the core job-data strategy.",
+    "verificationState": "Verified official source"
+  },
+  {
+    "id": "PART-JOBDATA",
+    "name": "Fantastic Jobs / licensed job-data provider",
+    "category": "Job data",
+    "applicableModules": [
+      "AI Job Matcher"
+    ],
+    "proposedUse": "Evaluate licensed aggregation for coverage, freshness and expiry handling.",
+    "officialUrl": "https://fantastic.jobs/",
+    "apiAvailability": "Commercial offering; exact API/partner terms require vendor confirmation.",
+    "authentication": "Vendor-defined",
+    "pricingEvidence": "Not publicly verified for HireNudge use.",
+    "commercialUseStatus": "Contract, DPA, geographic rights and redistribution terms required.",
+    "dataHandled": [
+      "Job postings",
+      "Source metadata"
+    ],
+    "securityRequirements": [
+      "Vendor assessment",
+      "Deletion SLA"
+    ],
+    "legalDependencies": [
+      "Contract",
+      "DPA",
+      "Source rights"
+    ],
+    "implementationComplexity": "Medium",
+    "recommendation": "Run a 500-job quality and rights audit before selection.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-APOLLO",
+    "name": "Apollo",
+    "category": "Contact data",
+    "applicableModules": [
+      "Email Outreach"
+    ],
+    "proposedUse": "Discover a bounded set of relevant professional contacts for user-reviewed outreach.",
+    "officialUrl": "https://docs.apollo.io/reference/apollo-api",
+    "apiAvailability": "Official API on eligible plans",
+    "authentication": "API key",
+    "pricingEvidence": "Plan/credit/rate limits apply and require current commercial confirmation.",
+    "commercialUseStatus": "Provider access does not create HireNudge lawful basis.",
+    "dataHandled": [
+      "Professional contact data",
+      "Company data"
+    ],
+    "securityRequirements": [
+      "Key security",
+      "Suppression",
+      "Source/date display"
+    ],
+    "legalDependencies": [
+      "DPA",
+      "Lawful-basis review",
+      "Notice/objection",
+      "Recipient-country rules"
+    ],
+    "implementationComplexity": "High",
+    "recommendation": "Pilot one provider, country and recipient use case only after legal approval.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-HUNTER",
+    "name": "Hunter",
+    "category": "Contact data",
+    "applicableModules": [
+      "Email Outreach"
+    ],
+    "proposedUse": "Find and verify a narrowly scoped professional email address.",
+    "officialUrl": "https://hunter.io/api-documentation/v2",
+    "apiAvailability": "Official API",
+    "authentication": "API key",
+    "pricingEvidence": "Credit and rate limits depend on plan.",
+    "commercialUseStatus": "Use remains subject to provider and recipient-country requirements.",
+    "dataHandled": [
+      "Professional email",
+      "Domain data"
+    ],
+    "securityRequirements": [
+      "Key security",
+      "Suppression",
+      "Removal response handling"
+    ],
+    "legalDependencies": [
+      "DPA",
+      "Lawful purpose",
+      "Marketing rules"
+    ],
+    "implementationComplexity": "Medium",
+    "recommendation": "Consider as a narrower finder/verifier alternative to broad enrichment.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-VOICE",
+    "name": "Realtime voice and transcription models",
+    "category": "AI / Voice",
+    "applicableModules": [
+      "Interview Preparation"
+    ],
+    "proposedUse": "Provide opt-in mock interview audio, transcription and descriptive feedback.",
+    "officialUrl": "https://platform.openai.com/docs/guides/realtime",
+    "apiAvailability": "Official APIs exist; final provider requires evaluation.",
+    "authentication": "Server-side API key",
+    "pricingEvidence": "Usage-based; current model pricing must be confirmed before build.",
+    "commercialUseStatus": "Subject to provider terms, retention controls and regional availability.",
+    "dataHandled": [
+      "Voice audio",
+      "Transcript",
+      "Interview context"
+    ],
+    "securityRequirements": [
+      "Explicit recording state",
+      "Encryption",
+      "Default deletion",
+      "Access logging"
+    ],
+    "legalDependencies": [
+      "Consent",
+      "Biometric/sensitive-data analysis review",
+      "Accessibility"
+    ],
+    "implementationComplexity": "High",
+    "recommendation": "Validate transcript-first practice before realtime voice.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-V0",
+    "name": "v0 by Vercel",
+    "category": "Design / code",
+    "applicableModules": [
+      "Landing Page",
+      "UI system"
+    ],
+    "proposedUse": "Generate and iterate interface prototypes that are reviewed and integrated into the product system.",
+    "officialUrl": "https://v0.dev/",
+    "apiAvailability": "Product and platform availability; export/use depends on current plan.",
+    "authentication": "Vercel account",
+    "pricingEvidence": "Plan-based; confirm current limits before procurement.",
+    "commercialUseStatus": "Review generated dependencies and asset licensing.",
+    "dataHandled": [
+      "Prompts",
+      "Uploaded design context"
+    ],
+    "securityRequirements": [
+      "Do not upload production user data"
+    ],
+    "legalDependencies": [
+      "Asset/code licence review"
+    ],
+    "implementationComplexity": "Low",
+    "recommendation": "Use for prototypes and component exploration, not as the design system source of truth.",
+    "verificationState": "Verified official source"
+  },
+  {
+    "id": "PART-RELUME",
+    "name": "Relume",
+    "category": "Design",
+    "applicableModules": [
+      "Landing Page"
+    ],
+    "proposedUse": "Explore sitemap, wireframe and component structure.",
+    "officialUrl": "https://www.relume.io/",
+    "apiAvailability": "Design product; integrations depend on plan.",
+    "authentication": "Account",
+    "pricingEvidence": "Plan-based; confirm current commercial relevance.",
+    "commercialUseStatus": "Review exported asset/component licences.",
+    "dataHandled": [
+      "Design prompts",
+      "Site structure"
+    ],
+    "securityRequirements": [
+      "No production user data"
+    ],
+    "legalDependencies": [
+      "Licence review"
+    ],
+    "implementationComplexity": "Low",
+    "recommendation": "Use for information-architecture exploration after positioning is selected.",
+    "verificationState": "Verified official source"
+  },
+  {
+    "id": "PART-21ST",
+    "name": "21st.dev",
+    "category": "UI resources",
+    "applicableModules": [
+      "UI system"
+    ],
+    "proposedUse": "Reference reusable community UI components and patterns.",
+    "officialUrl": "https://21st.dev/",
+    "apiAvailability": "Component platform",
+    "authentication": "Account may be required",
+    "pricingEvidence": "Confirm plan and component-specific licences.",
+    "commercialUseStatus": "Inspect each dependency and licence before use.",
+    "dataHandled": [
+      "Prompts or code snippets"
+    ],
+    "securityRequirements": [
+      "Dependency review"
+    ],
+    "legalDependencies": [
+      "Open-source/commercial licence review"
+    ],
+    "implementationComplexity": "Low",
+    "recommendation": "Use selectively; adapt to HireNudge tokens and accessibility rules.",
+    "verificationState": "Verified official source"
+  },
+  {
+    "id": "PART-REMOTION",
+    "name": "Remotion",
+    "category": "Video",
+    "applicableModules": [
+      "Landing Page",
+      "Social"
+    ],
+    "proposedUse": "Create code-driven product walkthroughs and social video variants.",
+    "officialUrl": "https://www.remotion.dev/",
+    "apiAvailability": "Open-source/commercial ecosystem",
+    "authentication": "Not required for core library",
+    "pricingEvidence": "Core and cloud/licensing terms differ; confirm production use.",
+    "commercialUseStatus": "Review media asset and font licences.",
+    "dataHandled": [
+      "Product mock data",
+      "Media assets"
+    ],
+    "securityRequirements": [
+      "Use seeded data only"
+    ],
+    "legalDependencies": [
+      "Asset/licence review"
+    ],
+    "implementationComplexity": "Medium",
+    "recommendation": "Use after the workflow and final UI are approved.",
+    "verificationState": "Verified official source"
+  },
+  {
+    "id": "PART-HYPER",
+    "name": "HyperFrames by HeyGen",
+    "category": "Video",
+    "applicableModules": [
+      "Landing Page",
+      "Social"
+    ],
+    "proposedUse": "Evaluate product-video production after messaging and claims are approved.",
+    "officialUrl": "https://www.heygen.com/",
+    "apiAvailability": "Commercial product; HyperFrames capability requires plan confirmation.",
+    "authentication": "Account",
+    "pricingEvidence": "Requires current commercial confirmation.",
+    "commercialUseStatus": "Review generated-media and likeness terms.",
+    "dataHandled": [
+      "Scripts",
+      "Brand assets",
+      "Generated media"
+    ],
+    "securityRequirements": [
+      "No private user data"
+    ],
+    "legalDependencies": [
+      "Asset rights",
+      "Disclosure where needed"
+    ],
+    "implementationComplexity": "Medium",
+    "recommendation": "Use only for approved original creative, not competitor imitation.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-HIGGS",
+    "name": "Higgsfield",
+    "category": "Image / video",
+    "applicableModules": [
+      "Landing Page",
+      "Social"
+    ],
+    "proposedUse": "Create original brand assets and concept explorations.",
+    "officialUrl": "https://higgsfield.ai/",
+    "apiAvailability": "Commercial creative platform",
+    "authentication": "Account",
+    "pricingEvidence": "Plan and output rights require current confirmation.",
+    "commercialUseStatus": "Review commercial output, likeness and training terms.",
+    "dataHandled": [
+      "Prompts",
+      "Brand assets"
+    ],
+    "securityRequirements": [
+      "No private screenshots or user data"
+    ],
+    "legalDependencies": [
+      "Output/licence review"
+    ],
+    "implementationComplexity": "Low",
+    "recommendation": "Use for original assets after brand direction and claims review.",
+    "verificationState": "Requires commercial confirmation"
+  },
+  {
+    "id": "PART-VO",
+    "name": "Vo",
+    "category": "Unverified tool name",
+    "applicableModules": [
+      "UI system"
+    ],
+    "proposedUse": "Team-described design tool; exact vendor and use are not confirmed.",
+    "officialUrl": null,
+    "apiAvailability": "Unknown",
+    "authentication": "Unknown",
+    "pricingEvidence": "Unknown",
+    "commercialUseStatus": "Do not procure or recommend until the exact product is identified.",
+    "dataHandled": [],
+    "securityRequirements": [
+      "Vendor identification"
+    ],
+    "legalDependencies": [
+      "Terms and licence review after identification"
+    ],
+    "implementationComplexity": "Unknown",
+    "recommendation": "Confirm whether the team means v0 by Vercel or another product.",
+    "verificationState": "Name/vendor confirmation required"
+  },
+  {
+    "id": "PART-GRAINRAD",
+    "name": "Grainrad",
+    "category": "Unverified tool name",
+    "applicableModules": [
+      "UI system"
+    ],
+    "proposedUse": "Team-described design/resource tool; exact vendor is not confirmed.",
+    "officialUrl": null,
+    "apiAvailability": "Unknown",
+    "authentication": "Unknown",
+    "pricingEvidence": "Unknown",
+    "commercialUseStatus": "Do not procure or recommend until identified.",
+    "dataHandled": [],
+    "securityRequirements": [
+      "Vendor identification"
+    ],
+    "legalDependencies": [
+      "Terms and licence review after identification"
+    ],
+    "implementationComplexity": "Unknown",
+    "recommendation": "Confirm spelling, vendor and intended workflow.",
+    "verificationState": "Name/vendor confirmation required"
+  }
+]

@@ -1,0 +1,219 @@
+[
+  {
+    "id": "COMP-DPDP",
+    "regime": "India DPDP",
+    "applicableModules": [
+      "All"
+    ],
+    "dataInvolved": [
+      "Resume",
+      "Profile",
+      "Application",
+      "Contact",
+      "Usage data"
+    ],
+    "processingPurpose": "Provide and improve HireNudge services for Indian users.",
+    "obligation": "Map applicable notice, consent/legitimate-use, rights, security, breach, processor and deletion duties against the Act and commenced Rules.",
+    "productControl": "Purpose-specific notice, consent ledger, rights workflow, minimisation and deletion.",
+    "releaseGate": "Legal review of the actual data map and implementation before claiming compliance.",
+    "state": "Legal Review Required",
+    "confirmationOwner": "Legal / Privacy",
+    "officialUrl": "https://www.meity.gov.in/data-protection-framework",
+    "limitation": "Commencement and rule-specific obligations must be checked against current official notifications."
+  },
+  {
+    "id": "COMP-GDPR",
+    "regime": "EU GDPR",
+    "applicableModules": [
+      "All services offered to or monitoring people in the EEA"
+    ],
+    "dataInvolved": [
+      "Career profile",
+      "Identifiers",
+      "Application history",
+      "Contact data"
+    ],
+    "processingPurpose": "Provide personalised job-search services.",
+    "obligation": "Document roles, lawful bases, transparency, data-subject rights, minimisation, security, processors and transfers.",
+    "productControl": "Data inventory, Article 13/14 notices where applicable, rights tooling, DPA and transfer controls.",
+    "releaseGate": "Counsel confirms applicability and implemented controls for the chosen corridor.",
+    "state": "Possibly Applies",
+    "confirmationOwner": "Legal / Privacy",
+    "officialUrl": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+    "limitation": "Applicability depends on establishment, offering and monitoring facts; this is not a compliance conclusion."
+  },
+  {
+    "id": "COMP-EPRIVACY",
+    "regime": "EU ePrivacy",
+    "applicableModules": [
+      "Email Outreach",
+      "Lifecycle"
+    ],
+    "dataInvolved": [
+      "Recipient email",
+      "Marketing preferences"
+    ],
+    "processingPurpose": "Send electronic communications.",
+    "obligation": "Apply the recipient-country electronic-marketing rules in addition to GDPR.",
+    "productControl": "Country classification, sender identity, opt-out, suppression and conservative sequencing.",
+    "releaseGate": "Approve the initial recipient-country matrix before sending.",
+    "state": "Legal Review Required",
+    "confirmationOwner": "Legal / Growth",
+    "officialUrl": "https://eur-lex.europa.eu/eli/dir/2002/58/oj",
+    "limitation": "Implemented through national laws; one global rule is insufficient."
+  },
+  {
+    "id": "COMP-PECR",
+    "regime": "UK GDPR / PECR",
+    "applicableModules": [
+      "Email Outreach",
+      "Lifecycle"
+    ],
+    "dataInvolved": [
+      "UK recipient email",
+      "Tracking data"
+    ],
+    "processingPurpose": "B2B or individual electronic outreach.",
+    "obligation": "Classify corporate versus individual subscribers and apply transparency, objection and PECR rules.",
+    "productControl": "Recipient classification, LIA where used, clear identity and suppression.",
+    "releaseGate": "UK use case approved before launch.",
+    "state": "Legal Review Required",
+    "confirmationOwner": "Legal / Growth",
+    "officialUrl": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/business-to-business-marketing/",
+    "limitation": "B2B context does not remove all privacy and direct-marketing duties."
+  },
+  {
+    "id": "COMP-CANSPAM",
+    "regime": "US CAN-SPAM",
+    "applicableModules": [
+      "Email Outreach",
+      "Lifecycle"
+    ],
+    "dataInvolved": [
+      "US recipient email"
+    ],
+    "processingPurpose": "Commercial electronic messages.",
+    "obligation": "Use accurate headers/subjects, identify the sender, include required address/opt-out and honor suppression.",
+    "productControl": "Message classification, footer controls, unsubscribe and suppression SLA.",
+    "releaseGate": "US commercial-message template and suppression test pass.",
+    "state": "Possibly Applies",
+    "confirmationOwner": "Legal / Growth",
+    "officialUrl": "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business",
+    "limitation": "Message classification and other federal/state rules require counsel."
+  },
+  {
+    "id": "COMP-CASL",
+    "regime": "Canada CASL",
+    "applicableModules": [
+      "Email Outreach",
+      "Lifecycle"
+    ],
+    "dataInvolved": [
+      "Canadian recipient email"
+    ],
+    "processingPurpose": "Commercial electronic messages to recipients in Canada.",
+    "obligation": "Assess consent, identification, unsubscribe and recordkeeping requirements before sending.",
+    "productControl": "Block Canada until an approved consent/use-case rule exists.",
+    "releaseGate": "Canadian use case and evidence records approved.",
+    "state": "Blocked",
+    "confirmationOwner": "Legal / Growth",
+    "officialUrl": "https://ised-isde.canada.ca/site/canada-anti-spam-legislation/en",
+    "limitation": "CASL analysis is fact-specific and can be stricter than US rules."
+  },
+  {
+    "id": "COMP-GOOGLE",
+    "regime": "Google OAuth and API Services User Data Policy",
+    "applicableModules": [
+      "Email Outreach",
+      "Job Tracker"
+    ],
+    "dataInvolved": [
+      "OAuth tokens",
+      "Gmail message data"
+    ],
+    "processingPurpose": "Send or sync user-authorised email actions.",
+    "obligation": "Use minimum scopes, accurate consent, verification where required, secure storage and revocation/deletion.",
+    "productControl": "gmail.send-first boundary, review screen, encrypted token vault and disconnect test.",
+    "releaseGate": "Actual scopes, token architecture, verification and revoke/delete tests approved.",
+    "state": "Blocked",
+    "confirmationOwner": "Engineering / Security / Privacy",
+    "officialUrl": "https://developers.google.com/terms/api-services-user-data-policy",
+    "limitation": "The published HireNudge policy does not prove the current OAuth implementation."
+  },
+  {
+    "id": "COMP-CHROME",
+    "regime": "Chrome Web Store policies",
+    "applicableModules": [
+      "Browser Extension"
+    ],
+    "dataInvolved": [
+      "Profile fields",
+      "Application page fields",
+      "Authentication token"
+    ],
+    "processingPurpose": "User-invoked autofill, tracker save and profile optimisation.",
+    "obligation": "Request the narrowest permissions, accurately disclose behavior and limit use to the stated single purpose.",
+    "productControl": "Permission audit, supported-site tests, explicit invocation and no auto-submit.",
+    "releaseGate": "Manifest, disclosure and runtime behavior reconcile with the privacy policy.",
+    "state": "Legal Review Required",
+    "confirmationOwner": "Engineering / Trust",
+    "officialUrl": "https://developer.chrome.com/docs/webstore/program-policies/",
+    "limitation": "Policy text must be verified against the current extension manifest and code."
+  },
+  {
+    "id": "COMP-RETENTION",
+    "regime": "Retention, deletion and user rights",
+    "applicableModules": [
+      "All"
+    ],
+    "dataInvolved": [
+      "Resume",
+      "Audio",
+      "Transcript",
+      "Applications",
+      "Tokens"
+    ],
+    "processingPurpose": "Operate the product while respecting user control.",
+    "obligation": "Define purpose-specific retention and operational deletion/export workflows.",
+    "productControl": "Retention matrix, in-product deletion/export, provider propagation and closure evidence.",
+    "releaseGate": "Deletion/export and token/provider propagation tests pass.",
+    "state": "Blocked",
+    "confirmationOwner": "Privacy / Engineering",
+    "officialUrl": "https://hirenudge.ai/privacy-policy/",
+    "limitation": "The policy uses general retention language; specific schedules and implementation evidence were not supplied."
+  },
+  {
+    "id": "COMP-TRANSFER",
+    "regime": "International data transfers",
+    "applicableModules": [
+      "All global corridors"
+    ],
+    "dataInvolved": [
+      "Career and application data processed across borders"
+    ],
+    "processingPurpose": "Use global infrastructure and service providers.",
+    "obligation": "Identify data locations and apply the required transfer mechanism and safeguards.",
+    "productControl": "Subprocessor/location register, transfer assessment and contractual safeguards.",
+    "releaseGate": "Selected providers and corridors have an approved transfer map.",
+    "state": "Legal Review Required",
+    "confirmationOwner": "Privacy / Security",
+    "officialUrl": "https://commission.europa.eu/law/law-topic/data-protection/international-dimension-data-protection_en",
+    "limitation": "Requirements depend on controller roles, locations and providers."
+  },
+  {
+    "id": "COMP-WCAG",
+    "regime": "Accessibility / WCAG 2.2",
+    "applicableModules": [
+      "All user interfaces"
+    ],
+    "dataInvolved": [],
+    "processingPurpose": "Provide an inclusive, operable service.",
+    "obligation": "Meet the agreed accessibility standard and applicable disability-law requirements for target markets.",
+    "productControl": "Keyboard, focus, contrast, reflow, labels, reduced motion and assistive-technology QA.",
+    "releaseGate": "Critical flows pass automated and manual accessibility tests.",
+    "state": "Applies",
+    "confirmationOwner": "Design / Engineering",
+    "officialUrl": "https://www.w3.org/TR/WCAG22/",
+    "limitation": "WCAG conformance requires live testing; screenshots only identify risks."
+  }
+]
