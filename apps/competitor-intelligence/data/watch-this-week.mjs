@@ -1,0 +1,62 @@
+const observedAt = "2026-08-01T16:30:00+05:30";
+
+const item = (slug, headline, company, category, geography, signalType, eventDate, sourceUrl, sourceType, extractedFact, researchState, confidence, whyItMatters, recommendedResponse, actionType = "Watch") => ({
+  id: `news-${slug}`,
+  headline,
+  platformId: "",
+  company,
+  category,
+  geography,
+  signalType,
+  eventDate,
+  publicationDate: eventDate,
+  sourceId: `source-news-${slug}`,
+  sourceUrl,
+  sourceType,
+  extractedFact,
+  researchState,
+  confidence,
+  whyItMatters,
+  recommendedResponse,
+  actionType,
+  status: "Published",
+  fingerprint: `2026-08-01:${slug}`,
+  supersedesId: "",
+  createdAt: observedAt,
+  updatedAt: observedAt,
+  rowVersion: 1,
+  datasetRevision: 2,
+  researchRunId: "research-run-weekly-2026-08-01",
+});
+
+export const watchThisWeek = [
+  item("ph-ziggers", "Ziggers launches an India-focused flexible-work marketplace", "Ziggers", "Frontline and gig marketplace", "India", "Launch", "2026-08-01", "https://www.producthunt.com/products/ziggers", "Product Hunt launch", "Product Hunt lists Ziggers as launching today and describes an on-demand marketplace for catering, event, delivery, warehouse and hospitality work in India.", "Company claim", "Medium", "It is a current India distribution and trust signal for local, temporary and frontline work.", "Discuss whether HireNudge needs an India-specific frontline segment or should stay focused on professional roles."),
+  item("ph-open-lance", "Open Lance launches a zero-commission freelance marketplace", "Open Lance", "Freelance marketplace", "Global", "Launch", "2026-08-01", "https://www.producthunt.com/products/open-lance", "Product Hunt launch", "Product Hunt lists Open Lance as launching today with free hiring and zero commission for freelancers.", "Company claim", "Medium", "A zero-commission promise is a packaging benchmark for two-sided career marketplaces.", "Track conversion and trust mechanics before considering any marketplace extension."),
+  item("ph-jobamine", "Jobamine launches a job-search command centre", "Jobamine", "Candidate career OS", "Global", "Launch", "2026-08-01", "https://www.producthunt.com/products/jobamine", "Product Hunt launch", "Product Hunt lists Jobamine as launching today with application tracking, resume tailoring and interview preparation.", "Company claim", "Medium", "Its all-in-one candidate workspace overlaps directly with the HireNudge operating-system hypothesis.", "Add Jobamine to startup radar and compare its data vault, Kanban workflow and anti-hallucination claims."),
+  item("ph-matchscope", "Matchscope launches job-description-to-resume gap analysis", "Matchscope", "Resume matching", "Global", "Launch", "2026-08-01", "https://www.producthunt.com/products/matchscope", "Product Hunt launch", "Product Hunt lists Matchscope as launching today and says it highlights resume gaps against a job description without rewriting the candidate's story.", "Company claim", "Medium", "The wording closely matches HireNudge's explainable-fit and provenance direction.", "Test a transparent must-have, gap and evidence view against a single opaque ATS score.", "Test"),
+  item("ph-rehiredd", "Rehiredd launches human-in-the-loop application automation", "Rehiredd", "Assisted apply", "Global", "Launch", "2026-08-01", "https://www.producthunt.com/products/rehiredd", "Product Hunt launch", "Product Hunt lists Rehiredd as launching today and positions it as automated job applications with a human in the loop.", "Company claim", "Medium", "Human review is a more trust-aligned benchmark than fully autonomous high-volume applications.", "Review its approval checkpoints, volume limits and evidence controls before designing assisted apply.", "Research"),
+  item("ph-work-expert", "Work Expert launches discovery for paid AI gig work", "Work Expert", "AI work marketplace", "Global", "Launch", "2026-08-01", "https://www.producthunt.com/products/work-expert", "Product Hunt launch", "Product Hunt lists Work Expert as launching today to help people find high-paying AI gig work.", "Company claim", "Low", "AI gig discovery may become an adjacent job-intent segment for technically skilled Indian candidates.", "Watch demand quality and whether opportunities are verified before treating it as a roadmap input."),
+  item("ph-chair-across", "The Chair Across launches interviewer-led preparation", "The Chair Across", "Interview preparation", "Global", "Launch", "2026-08-01", "https://www.producthunt.com/products/the-chair-across", "Product Hunt launch", "Product Hunt lists The Chair Across as launching today with role-specific interview questions and CV tailoring derived from the job and candidate CV.", "Company claim", "Medium", "Its interviewer-perspective framing is a differentiated preparation wedge.", "Test whether interviewer-rubric framing improves practice completion and answer quality.", "Test"),
+  item("ph-rekvo", "Rekvo launches an AI-powered ATS for growing teams", "Rekvo", "Applicant tracking system", "Global", "Launch", "2026-08-01", "https://www.producthunt.com/products/rekvo", "Product Hunt launch", "Product Hunt lists Rekvo as launching today and describes it as an AI-powered ATS for growing teams.", "Company claim", "Low", "New lightweight ATS entrants indicate continued unbundling and may expose integration or candidate-status opportunities.", "Track its candidate communication and integration model rather than treating the launch as traction."),
+  item("ph-vela-week", "Vela launches an AI recruiting coordinator", "Vela", "Recruiting coordination", "Global", "Product", "2026-08-01", "https://www.producthunt.com/products/vela-4", "Product Hunt launch", "Product Hunt labels Vela's recruiting-coordinator launch as this week; the company says it handles screens, loops, panels, rescheduling and feedback across email, SMS, WhatsApp, Slack and phone.", "Company claim", "Medium", "Its no-new-login, multi-channel orchestration is a strong workflow-design benchmark.", "Adapt the interaction pattern only for candidate-owned reminders and consented follow-up; avoid autonomous recruiter spam.", "Adapt"),
+  item("ph-resumize-week", "ResumizeAI launches an integrated search-and-tailoring workflow", "ResumizeAI", "Candidate career OS", "Global", "Product", "2026-08-01", "https://www.producthunt.com/products/resumizeai", "Product Hunt launch", "Product Hunt labels ResumizeAI as launched this week and describes live job search, resume and cover-letter tailoring, PDF export and shareable profiles.", "Company claim", "Medium", "Integrated discovery-to-tailoring is direct evidence that candidate tools are converging into operating systems.", "Compare its truth-preservation and workflow latency with HireNudge's proposed evidence vault.", "Research"),
+  item("ph-blomma-week", "Blomma adds ATS, recruiter and hiring-manager resume views", "Blomma", "Career coaching", "Global", "Product", "2026-08-01", "https://www.producthunt.com/products/blomma", "Product Hunt launch", "Product Hunt labels Blomma's Resume Support launch as this week and says it shows how a resume reads to an ATS, recruiter and hiring manager before suggesting skill and outcome edits.", "Company claim", "Medium", "Multi-perspective explanation is a useful alternative to a single ATS score.", "Prototype three explainable views—system, recruiter and hiring manager—and test comprehension.", "Test"),
+  item("eu-ai-omnibus", "EU AI Omnibus changes compliance timing while preserving safeguards", "European Commission", "AI regulation", "Europe", "Regulatory", "2026-07-27", "https://digital-strategy.ec.europa.eu/en/news/ai-omnibus-enters-force", "Regulator publication", "The European Commission says the AI Omnibus entered into force on 27 July 2026, extending timing for certain high-risk AI rules while preserving fundamental-rights safeguards and expanding regulatory sandboxes.", "Verified", "High", "HireNudge may touch high-risk hiring contexts through recommendations, screening preparation, or employer integrations; product claims and trust controls need explicit legal review.", "Create a trust review of explainability, consent, human oversight, data retention and appeal before employer-side expansion.", "Discuss"),
+  item("voice-ai-field-experiment", "Field experiment reports structured voice-AI interviews improved downstream hiring outcomes", "Research: Jabarian and Henkel", "Hiring research", "Global", "Market", "2026-07-30", "https://arxiv.org/abs/2607.28222", "Research paper", "A preprint reports a randomized field experiment with 70,000 applicants in which human recruiters retained decision authority; the authors report 12% higher offer likelihood for applicants interviewed by AI voice agents, plus higher starts and retention without lower worker productivity.", "Observed", "High", "The design separates automated information collection from human decisions and provides an outcome-based benchmark rather than a vendor claim.", "Review the methods and test structured candidate practice—not autonomous evaluation—against interview-quality metrics.", "Research"),
+  item("micro1-zara-experience", "Candidate reports rejection after Micro1's Zara AI interview", "Micro1", "AI interviewing", "Global", "Trust", "2026-08-01", "https://www.reddit.com/r/recruitinghell/comments/1vcher9/my_experience_with_micro1s_ai_interviewer_zara/", "Community discussion", "A candidate described completing an AI interview with Micro1's Zara and receiving a rejection; the post is a single qualitative experience, not evidence of system performance.", "Observed", "Low", "Candidate uncertainty around automated interviews reinforces the need for disclosure, feedback, appeal and preparation support.", "Add disclosure and candidate-control requirements to any AI-interview feature review.", "Discuss"),
+  item("candidate-id-voice-recording", "Candidates question ID verification and voice recording in AI interviews", "Hiring market", "Candidate experience", "Global", "Trust", "2026-07-30", "https://www.reddit.com/r/careerguidance/comments/1vapyuj/genuine_questionare_ai_interviews_the_new_normal/", "Community discussion", "A candidate reported encountering an AI interview with identity verification and voice recording and asked whether this is becoming standard; this is qualitative evidence only.", "Observed", "Low", "The concern maps directly to consent, accessibility, data minimization and candidate trust.", "Make privacy explanations and non-recorded practice modes explicit requirements for HireNudge.", "Improve"),
+  item("startup-india-uval", "Indian builders surface AI products for developer upskilling and technical hiring", "StartHack.io / UVAL.ai", "Technical hiring", "India", "Launch", "2026-07-27", "https://www.reddit.com/r/StartUpIndia/comments/1v7no19/weekly_startups_promotion_thread_27_july_2026/", "Community launch thread", "A Startup India community launch thread included builders promoting StartHack.io and UVAL.ai for developer upskilling and technical hiring; product identity and traction require independent verification.", "Observed", "Low", "It is an India-specific discovery signal at the boundary of skills development and technical assessment.", "Add both products to the discovery queue, verify functioning products and check for transferable proof-of-skill workflows.", "Research"),
+];
+
+export const weeklyNewsSources = watchThisWeek.map((news) => ({
+  id: news.sourceId,
+  title: news.headline,
+  url: news.sourceUrl,
+  type: news.sourceType,
+  status: news.researchState,
+  observedDate: "2026-08-01",
+  effectiveDate: news.eventDate,
+  confidence: news.confidence,
+  reviewer: "Founder’s Office",
+}));
+

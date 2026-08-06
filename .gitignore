@@ -1,0 +1,51 @@
+# OS and editor artifacts
+.DS_Store
+Thumbs.db
+Desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Local agent and audit artifacts
+.gstack/
+
+# Dependencies
+node_modules/
+
+# Framework and build output
+.next/
+dist/
+build/
+coverage/
+.turbo/
+.cache/
+cache/
+*.tsbuildinfo
+
+# Logs
+*.log
+logs/
+
+# Deployment-local state
+.vercel/
+
+# Environment files and secrets
+.env
+.env.*
+*.env
+*.env.*
+.envrc
+
+# Keep safe environment templates trackable
+!.env.example
+!*.env.example
+!.env.*.example
+!*.env.*.example
+
+# Generated HireNudge artifacts retained outside Git
+/outputs/
+/reports/
+apps/*/outputs/
+apps/*/data/research/generated/
