@@ -5,8 +5,14 @@ import {
   moduleOptions,
   strategyCounts,
 } from "../src/features/strategy/data";
+import canonicalInitiatives from "../../../src/data/initiatives.json";
+import deploymentInitiatives from "../data/strategy-initiatives.json";
 
 describe("strategy initiative data", () => {
+  it("keeps the deployment mirror identical to the canonical root register", () => {
+    expect(deploymentInitiatives).toEqual(canonicalInitiatives);
+  });
+
   it("loads the complete reviewed canonical register", () => {
     expect(initiatives).toHaveLength(38);
     expect(new Set(initiatives.map((initiative) => initiative.id)).size).toBe(38);

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import rawInitiatives from "../../../../../src/data/initiatives.json";
+import rawInitiatives from "../../../data/strategy-initiatives.json";
 import {
   decisionStatuses,
   evidenceStatuses,

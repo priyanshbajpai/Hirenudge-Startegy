@@ -19,7 +19,7 @@ This repository is Priyansh Bajpai’s durable strategy, research, and execution
 
 ## Founder Strategy Dashboard
 
-The founder-ready dashboard is implemented in the existing Next.js application at `/strategy`. It uses local, typed initiative data and exposes no customer data, live APIs, AI generation, authentication dependency, or external analytics.
+The founder-ready dashboard is implemented in the existing Next.js application at `/strategy`. It uses local, typed initiative data and exposes no customer data, live APIs, AI generation, authentication dependency, or external analytics. The canonical register remains at `src/data/initiatives.json`; the app carries an exact deployment mirror at `apps/competitor-intelligence/data/strategy-initiatives.json`, enforced by a test.
 
 ```bash
 cd apps/competitor-intelligence
