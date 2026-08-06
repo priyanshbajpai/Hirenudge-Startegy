@@ -1,4 +1,5 @@
-import greenManifest from "../../data/research/generated/green-research-manifest.json";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { getSheetsClient, invalidateDataset, spreadsheetId } from "@/lib/sheets";
 
 const PRODUCTION_ID = "1bAZDhGso089sYplGHBX-YKrIRUVy3rCdDbaRdCpBRQg";
@@ -16,6 +17,32 @@ const columns: Record<string,string[]> = {
 };
 
 type Row = Record<string,unknown>;
+type GreenResearchResult = Record<string,unknown> & {
+  company:{id:string;cohort:string;name:string;category:string;side:string;geography:string;website:string};
+  claims:Row[];
+  modules:Row[];
+  featureObservations:Row[];
+  sources:Row[];
+  sourceChecks:Row[];
+  completion:Row;
+  pricing?:Row[];
+  metrics?:Row[];
+  gtmObservations?:Row[];
+};
+type GreenResearchManifest = { generatedAt:string; results:GreenResearchResult[] };
+
+async function loadGreenManifest():Promise<GreenResearchManifest> {
+  const manifestPath=path.join(process.cwd(),"data","research","generated","green-research-manifest.json");
+  try {
+    return JSON.parse(await readFile(manifestPath,"utf8")) as GreenResearchManifest;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      throw new Error("Research import is unavailable because the generated manifest is not included in this deployment.");
+    }
+    throw error;
+  }
+}
+
 const normalized = (value:unknown) => Array.isArray(value) ? value.join("\n") : value ?? "";
 const toRows = (records:Row[], keys:string[]) => records.map((record)=>keys.map((key)=>normalized(record[key])));
 
@@ -35,7 +62,8 @@ async function replacePlatforms(tab:string, records:Row[], platformIds:Set<strin
 export async function importGreenResearchToStaging(actor:string) {
   if(spreadsheetId===PRODUCTION_ID) throw new Error("Research import refused: production cutover gate is closed.");
   if(spreadsheetId!==STAGING_ID) throw new Error("Research import is permitted only on the locked staging workbook.");
-  const results=greenManifest.results as unknown as Array<Record<string,unknown> & {company:{id:string;cohort:string;name:string;category:string;side:string;geography:string;website:string};claims:Row[];modules:Row[];featureObservations:Row[];sources:Row[];sourceChecks:Row[];completion:Row;pricing?:Row[];metrics?:Row[];gtmObservations?:Row[]}>;
+  const greenManifest=await loadGreenManifest();
+  const results=greenManifest.results;
   const platformIds=new Set(results.map((result)=>result.company.id));
   await replacePlatforms("_Claim Observations",results.flatMap((result)=>result.claims),platformIds);
   await replacePlatforms("_Company Modules",results.flatMap((result)=>result.modules),platformIds);
