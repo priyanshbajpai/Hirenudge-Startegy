@@ -1,6 +1,0 @@
-.next
-.vercel
-node_modules
-outputs
-data/research/generated/public-first-checkpoint.json
-data/research/generated/public-first-manifest.json

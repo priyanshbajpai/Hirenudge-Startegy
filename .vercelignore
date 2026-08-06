@@ -1,0 +1,16 @@
+# Deploy only the public dashboard application from this monorepo.
+# This prevents strategy research, audit evidence, local tooling, and attachments
+# outside the application from being uploaded by Vercel CLI.
+/*
+!apps
+apps/*
+!apps/competitor-intelligence
+
+# Local and generated application artifacts are not deployment inputs.
+apps/competitor-intelligence/.next
+apps/competitor-intelligence/.vercel
+apps/competitor-intelligence/node_modules
+apps/competitor-intelligence/outputs
+apps/competitor-intelligence/tsconfig.tsbuildinfo
+apps/competitor-intelligence/data/research/generated/public-first-checkpoint.json
+apps/competitor-intelligence/data/research/generated/public-first-manifest.json
