@@ -1,2 +1,2 @@
-import { RetentionSection } from "@/features/strategy/sections/retention-section";
-export default function RetentionPage() { return <RetentionSection />; }
+import { ActivationRetention } from "@/features/prd/workspaces/activation-retention";
+export default function RetentionPage() { return <ActivationRetention />; }

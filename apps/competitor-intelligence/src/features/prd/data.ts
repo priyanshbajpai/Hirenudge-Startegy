@@ -10,7 +10,7 @@ export const complianceRecords = complianceRecordsSchema.parse(rawCompliance);
 
 const includesAny = <T extends string>(value: T, selected: readonly T[]) => !selected.length || selected.includes(value);
 
-export function filterPrdRecords(records: PrdRecord[], filters: Partial<PrdFilters>) {
+export function filterPrdRecords<T extends PrdRecord>(records: T[], filters: Partial<PrdFilters>): T[] {
   const query = filters.query?.trim().toLowerCase() ?? "";
   return records.filter((record) => {
     const haystack = [record.id, record.title, record.workspace, record.module, record.screen, record.currentBehaviour, record.userProblem, record.proposedChange, record.owner].join(" ").toLowerCase();

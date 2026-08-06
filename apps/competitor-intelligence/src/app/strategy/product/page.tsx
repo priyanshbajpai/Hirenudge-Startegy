@@ -1,2 +1,2 @@
-import { ProductSection } from "@/features/strategy/sections/product-section";
-export default function ProductPage() { return <ProductSection />; }
+import { ProductPrds } from "@/features/prd/workspaces/product-prds";
+export default function ProductPage() { return <ProductPrds />; }

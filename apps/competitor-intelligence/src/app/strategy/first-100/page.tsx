@@ -1,2 +1,2 @@
-import { First100Section } from "@/features/strategy/sections/first-100-section";
-export default function First100Page() { return <First100Section />; }
+import { redirect } from "next/navigation";
+export default function First100Page() { redirect("/strategy/gtm"); }

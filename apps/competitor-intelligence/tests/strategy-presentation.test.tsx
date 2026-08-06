@@ -4,12 +4,14 @@ import React from "react";
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
 import { StrategyPresentation } from "../src/features/strategy/strategy-presentation";
+import { PrdProvider } from "../src/features/prd/prd-provider";
 
 afterEach(cleanup);
 
 describe("founder presentation mode", () => {
   it("navigates all 15 chapters with controls and keyboard", () => {
-    render(<StrategyPresentation />);
+    render(<PrdProvider><StrategyPresentation /></PrdProvider>);
+    expect(screen.getByText("Local PRD draft")).toBeVisible();
     expect(screen.getAllByText("01 / 15")[0]).toBeVisible();
     expect(screen.getByRole("heading", { name: "Where HireNudge is today" })).toBeVisible();
     fireEvent.keyDown(window, { key: "ArrowRight" });
@@ -19,7 +21,7 @@ describe("founder presentation mode", () => {
   });
 
   it("opens chapter navigation and jumps to founder decisions", () => {
-    render(<StrategyPresentation />);
+    render(<PrdProvider><StrategyPresentation /></PrdProvider>);
     fireEvent.click(screen.getByRole("button", { name: "Open chapter navigator" }));
     fireEvent.click(screen.getByRole("button", { name: /15 Founder decisions/i }));
     expect(screen.getAllByText("15 / 15")[0]).toBeVisible();

@@ -1,2 +1,2 @@
-import { RoadmapSection } from "@/features/strategy/sections/roadmap-section";
-export default function RoadmapPage() { return <RoadmapSection />; }
+import { RoadmapWorkspace } from "@/features/prd/workspaces/roadmap";
+export default function RoadmapPage() { return <RoadmapWorkspace />; }

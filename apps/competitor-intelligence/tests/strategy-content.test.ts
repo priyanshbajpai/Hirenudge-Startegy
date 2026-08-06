@@ -4,20 +4,20 @@ import { founderDecisions } from "../src/features/strategy/decisions";
 import { presentationChapters } from "../src/features/strategy/presentation";
 
 describe("founder strategy content", () => {
-  it("defines the eleven approved dashboard destinations", () => {
+  it("defines the eleven PRD command destinations", () => {
     expect(strategyNavigation).toHaveLength(11);
     expect(strategyNavigation.map((item) => item.label)).toEqual([
-      "Overview",
-      "Product & Features",
-      "UI/UX",
-      "Brand Language",
-      "Social & Advertising",
-      "GTM",
-      "First 100 Customers",
-      "Retention",
+      "Command Center",
+      "Product PRDs",
+      "Screens & UX",
+      "Partners & APIs",
+      "Legal & Trust",
+      "GTM & First 100",
+      "Social Studio",
+      "Activation & Retention",
       "Roadmap",
-      "Founder Decisions",
-      "Research & Evidence",
+      "Decision Queue",
+      "Evidence Library",
     ]);
   });
 

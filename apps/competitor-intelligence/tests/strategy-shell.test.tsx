@@ -22,7 +22,8 @@ describe("strategy shell", () => {
     expect(screen.getByRole("link", { name: "Skip to strategy content" })).toHaveAttribute("href", "#strategy-content");
     expect(screen.getByRole("navigation", { name: "Strategy sections" })).toBeInTheDocument();
     expect(screen.getAllByRole("link", { name: /Presentation mode/i })[0]).toHaveAttribute("href", "/strategy/presentation");
-    expect(screen.getByText("No founder approvals recorded")).toBeVisible();
+    expect(screen.getByText("Edits save only in this browser")).toBeVisible();
+    expect(screen.getByRole("link", { name: /Product PRDs/i })).toHaveAttribute("href", "/strategy/product");
   });
 
   it("opens and closes responsive navigation", () => {

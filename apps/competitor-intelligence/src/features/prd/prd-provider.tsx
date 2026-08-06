@@ -44,6 +44,8 @@ export function PrdProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const stored = window.localStorage.getItem(PRD_STORAGE_KEY);
     if (stored) {
+      // Hydrate the deliberately browser-local draft after the server render.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       try { setDraft(parseDraft(stored)); } catch { window.localStorage.removeItem(PRD_STORAGE_KEY); }
     }
     setReady(true);

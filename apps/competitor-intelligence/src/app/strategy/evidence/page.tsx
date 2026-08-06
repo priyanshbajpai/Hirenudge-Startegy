@@ -1,2 +1,2 @@
-import { EvidenceSection } from "@/features/strategy/sections/evidence-section";
-export default function EvidencePage() { return <EvidenceSection />; }
+import { EvidenceLibrary } from "@/features/prd/workspaces/evidence-library";
+export default function EvidencePage() { return <EvidenceLibrary />; }

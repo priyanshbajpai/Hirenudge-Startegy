@@ -7,17 +7,17 @@ export interface StrategyNavigationItem {
 }
 
 export const strategyNavigation: readonly StrategyNavigationItem[] = [
-  { slug: "overview", href: "/strategy", label: "Overview", shortLabel: "Overview", description: "Direction, priorities, risks and decisions" },
-  { slug: "product", href: "/strategy/product", label: "Product & Features", shortLabel: "Product", description: "Capabilities, improvements and new opportunities" },
-  { slug: "ux", href: "/strategy/ux", label: "UI/UX", shortLabel: "UI/UX", description: "Journey, interface and accessibility direction" },
-  { slug: "brand", href: "/strategy/brand", label: "Brand Language", shortLabel: "Brand", description: "Positioning, tone, terminology and claims" },
-  { slug: "social", href: "/strategy/social", label: "Social & Advertising", shortLabel: "Social", description: "Channels, content, campaigns and paid gates" },
-  { slug: "gtm", href: "/strategy/gtm", label: "GTM", shortLabel: "GTM", description: "ICP, corridors, offer and acquisition" },
-  { slug: "first-100", href: "/strategy/first-100", label: "First 100 Customers", shortLabel: "First 100", description: "Paid cohort plan, learning goals and gates" },
-  { slug: "retention", href: "/strategy/retention", label: "Retention", shortLabel: "Retention", description: "Lifecycle, search state and frequency controls" },
+  { slug: "command", href: "/strategy", label: "Command Center", shortLabel: "Command Center", description: "Priorities, delivery health and decisions" },
+  { slug: "product", href: "/strategy/product", label: "Product PRDs", shortLabel: "Product PRDs", description: "Modules, requirements and acceptance criteria" },
+  { slug: "ux", href: "/strategy/ux", label: "Screens & UX", shortLabel: "Screens & UX", description: "Current-to-changing journey and interface" },
+  { slug: "partners", href: "/strategy/partners", label: "Partners & APIs", shortLabel: "Partners & APIs", description: "Tools, vendors, rights and dependencies" },
+  { slug: "legal", href: "/strategy/legal", label: "Legal & Trust", shortLabel: "Legal & Trust", description: "Obligations, controls and release gates" },
+  { slug: "gtm", href: "/strategy/gtm", label: "GTM & First 100", shortLabel: "GTM & First 100", description: "ICP, corridors and cohort acquisition" },
+  { slug: "social", href: "/strategy/social", label: "Social Studio", shortLabel: "Social Studio", description: "Organic, founder-led and paid learning" },
+  { slug: "retention", href: "/strategy/retention", label: "Activation & Retention", shortLabel: "Activation & Retention", description: "First value, lifecycle and outcome loops" },
   { slug: "roadmap", href: "/strategy/roadmap", label: "Roadmap", shortLabel: "Roadmap", description: "Now, Next, Later, Research and Blocked" },
-  { slug: "decisions", href: "/strategy/decisions", label: "Founder Decisions", shortLabel: "Decisions", description: "Choices that unblock evidence and execution" },
-  { slug: "evidence", href: "/strategy/evidence", label: "Research & Evidence", shortLabel: "Evidence", description: "Sources, confidence, unknowns and caveats" },
+  { slug: "decisions", href: "/strategy/decisions", label: "Decision Queue", shortLabel: "Decision Queue", description: "Founder choices that unblock delivery" },
+  { slug: "evidence", href: "/strategy/evidence", label: "Evidence Library", shortLabel: "Evidence Library", description: "Sources, confidence, unknowns and caveats" },
 ];
 
 export const strategicSummary = "HireNudge has broad candidate-workflow coverage, but the supplied evidence does not prove a coherent, retained or outcome-improving product. Protect trust, define activation, connect one real application from role selection to outcome, and test that workflow with a narrow India-based cohort.";
